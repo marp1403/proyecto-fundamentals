@@ -1,0 +1,68 @@
+body {
+  font-family: var(--text);
+  color: var(--foreground);
+  background-color: var(--background);
+  font-size: var(--font-base);
+  line-height: var(--leading-6);
+  accent-color: var(--primary);
+  
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--heading);
+}
+
+code {
+  font-family: var(--monospace);
+}
+
+hr {
+  margin-block: 48px;
+  border: none;
+  border-top: 1px solid var(--border);
+}
+
+main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: 80px;
+}
+
+pre{
+  background-color: black;
+  border-radius: var(--rounded-md);
+  color: var(--muted);
+  white-space: pre-wrap;
+  text-align: left;
+  white-space: pre;
+  padding: var(--spacing-3) var(--spacing-2_5);
+  overflow: auto;
+  width: 100%;
+}
+
+code{
+   font-family: var(--monospace);
+   font-weight: 400;
+   white-space: pre-wrap;
+   font-size: var(--font-sm);
+   
+}
+
+:focus {
+  outline-offset: 3px;
+  outline-color: var(--ring);
+  outline-width: 2px;
+}
+
+input[type='radio'], [type='checkbox']{
+  width: 16px;
+  height: 16px;
+}

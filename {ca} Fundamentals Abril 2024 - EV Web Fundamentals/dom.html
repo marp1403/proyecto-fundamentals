@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <link rel="stylesheet" href="/styles/index.css" />
+  <title>Web Fundamentals Evaluation - Manipulación DOM</title>
+</head>
+
+<body>
+  <header class="header">
+    <div class="container header__container">
+      <a href="/index.html">
+        <img src="assets/images/codeable-logo-sm.svg" alt="codeable-logo" width="135" height="32"
+          class="header__logo" />
+      </a>
+
+      <nav class="navigation header__navigation">
+        <ul class="navigation__items">
+          <li class="active"><a href="/diagramas.html">Diagramas VV</a></li>
+          <li><a href="/funciones.html">Funciones</a></li>
+          <li><a href="/dom.html">Manipulación del DOM</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__btn-toggle">
+        <i class="fa-solid fa-bars"></i>
+      </div>
+
+      <p class="header__name">Michael Rasmussen</p>
+    </div>
+  </header>
+
+  <main>
+    <div class="container">
+      <section class="instructions section">
+        <div class="container">
+          <div class="content">
+            <h1>Manipulación del DOM</h1>
+            <h2>Instrucciones</h2>
+            <p>
+              Sigue las instrucciones y crea componentes web utilizando
+              JavaScript, manipulando el DOM, escuchando eventos e
+              implementando persistencia con localStorage.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <section class="dom section-base">
+        <div class="container">
+          <div class="content">
+
+            <!-- tooltip -->
+            <article class="article__description">
+              <h3>Crea un 'Tooltip'</h3>
+              <p>
+                Un Tooltip es un pequeño cuadro de información que aparece
+                cuando pasas el cursor sobre un elemento en una interfaz
+                gráfica de usuario. Este cuadro ofrece detalles adicionales
+                sobre la función del elemento, proporcionando así una ayuda
+                contextual. Por ejemplo, si pasas el cursor sobre un botón que
+                guarda cambios en una aplicación, un Tooltip podría aparecer
+                con el texto "Guardar", para clarificar qué hace ese botón.
+                Los Tooltips son útiles para mejorar la experiencia del
+                usuario, ya que proporcionan orientación sin requerir que se
+                desplace a otra sección para obtener más información.
+              </p>
+
+              <div class="article__requirement">
+                <h3>Requerimiento</h3>
+                <p>
+                  Tu tarea es crear un Tooltip, un pequeño elemento emergente
+                  que proporciona información adicional cuando el usuario pasa
+                  el cursor sobre un elemento. Utilizarás JavaScript para
+                  manipular el DOM y crear este componente.
+                </p>
+
+                <ul class="list">
+                  <li>
+                    <span class="span-bold">Elemento Objetivo:</span>
+                    El elemento sobre el cual aparecerá el Tooltip será
+                    cualquier elemento que tenga un atributo `data-tooltip`
+                    definido.
+                  </li>
+                  <li>
+                    <span class="span-bold">Contenido del Tooltip: </span> El
+                    valor del atributo será el mensaje que aparecerá en el
+                    Tooltip. Por ejemplo, un elemento con el atributo
+                    `data-tooltip="Grabar"` mostrará el texto "Grabar" como
+                    contenido del Tooltip.
+                  </li>
+                  <li>
+                    <span class="span-bold">Posicionamiento: </span> El
+                    Tooltip debe aparecer encima del elemento objetivo.
+                  </li>
+                  <li>
+                    <span class="span-bold">Estilo :</span> Sigue el diseño
+                    especificado en Figma para dar estilo al Tooltip
+                  </li>
+                  <li>
+                    <span class="span-bold">Interacción :</span> El Tooltip
+                    debe mostrarse cuando el usuario pase el cursor sobre el
+                    elemento objetivo y desaparecer cuando el cursor se mueva
+                    fuera del elemento. Pero no lo debe hacer inmediato. El
+                    mouse debe mantenerse por encima del elemento objetivo
+                    durante 300ms para luego mostrar el Tooltip. Si el cursor
+                    sale del elemento objetivo antes de cumplirse los 300ms,
+                    el Tooltip no debe mostrarse.
+                  </li>
+                </ul>
+              </div>
+
+              <div class="article__demo">
+                <h3>Demo</h3>
+                <p>A continuación, presenta una demostración del Tooltip.</p>
+
+                <pre><code> &lt;button data-tooltip="¡Funciona! 😄">Tooltip&lt;/button&gt; </code></pre>
+
+                <div class="article__demo-tooltip">
+                  <button class="button btn-tooltip" data-tooltip="¡Funciona! 😄">
+                    Tooltip
+                  </button>
+                </div>
+              </div>
+            </article>
+
+            <!-- form -->
+            <article class="article__form-validation">
+              <h3>Crea un Formulario con Validación en tiempo real</h3>
+              <p>
+                El objetivo de este ejercicio es crear un formulario HTML que realice validaciones en tiempo real
+                utilizando JavaScript, persista el progreso usando localStorage y procese el envío usando JavaScript
+                para mostrar un mensaje con la respuesta del servidor.
+              </p>
+
+              <div class="article__requirement">
+                <h3>Requerimientos</h3>
+
+                <div class="article__requirement-details">
+                  <h4>Campos del formulario:</h4>
+                  <ul class="list">
+                    <li><span class="span-bold">Nombre:</span> Un input obligatorio</li>
+                    <li><span class="span-bold">Apodo:</span> Un input obligatorio de entre 3 y 10 caracteres. Solo debe
+                      aceptar caracteres alfanuméricos. Estos son letras (a-z) o (A-Z), dígitos (0-9).</li>
+                    <li><span class="span-bold">Biografía :</span> Textarea opcional, pero si se llena, deberá tener
+                      mínimo 100 caracteres.</li>
+                    <li><span class="span-bold">Contraseña :</span> Un input obligatorio de mínimo 8 caracteres, al menos
+                      una letra mayúscula y un número.</li>
+                  </ul>
+                </div>
+
+                <div class="article__requirement-details">
+                  <h4>Validación en Tiempo Real</h4>
+                  <ul class="list">
+                    <li>Valida el contenido de cada campo inmediatamente cuando el usuario comienza a escribir en él.
+                    </li>
+                    <li>Muestra un mensaje de error debajo del campo cuando no pasa la validación.</li>
+                    <li>El mensaje de error debe desaparecer cuando el campo sea válido.</li>
+
+                  </ul>
+                </div>
+
+                <div class="article__requirement-details">
+                  <h4>Persistencia</h4>
+                  <ul class="list">
+                    <li>Guarda el progreso del usuario en el `localStorage` cada vez que se valide un campo (no queremos
+                      guardar datos inválidos)</li>
+                    <li>Al recargar la página, el formulario debe recuperar el estado guardado del `localStorage`.</li>
+                    <li>El campo Contraseña contiene datos sensibles por lo tanto no debe almacenarse en `localStorage`
+                    </li>
+
+                  </ul>
+                </div>
+
+                <div class="article__requirement-details">
+                  <h4>Envío del Formulario</h4>
+                  <ul class="list">
+                    <li>El botón para enviar el formulario debe estar deshabilitado hasta que todos los campos sean
+                      válidos.</li>
+                    <li>Al hacer clic en enviar, simula una petición al servidor utilizando JavaScript. El método debe
+                      ser POST, la URL será el servicio echo '​https://mocktarget.apigee.net/echo'. Deberá tener el
+                      header Content-Type adecuado.</li>
+                    <li>Luego de procesar la respuesta, añade un elemento debajo del formulario que muestre la respuesta
+                      del servidor en formato JSON.</li>
+
+                  </ul>
+                </div>
+
+
+
+
+              </div>
+
+              <div class="article__demo">
+                <h3>Demo</h3>
+                <p>A continuación, presenta una demostración del Formulario con validación.</p>
+
+                <pre><code> &lt;!-- código del formulario aquí --&gt;   </code></pre>
+
+                <div class="article__demo-form">
+
+                  <form id="form-validation" name="register" method="post">
+
+                    <div class="form-field">
+                      <label for="nombre">Nombre</label>
+                      <input type="text" placeholder="Ramón Suarez" name="nombre" id="name">
+                    </div>
+
+                    <div class="form-field">
+                      <label for="apodo">Apodo</label>
+                      <input type="text" placeholder="ramonsupersuarez" name="apodo" id="nick">
+                    </div>
+
+                    <div class="form-field">
+                      <label for="bio">Biografía</label>
+                      <textarea name="bio" placeholder="ramonsupersuarez" id="bio"></textarea>
+                    </div>
+
+                    <div class="form-field">
+                      <label for="password">Contraseña</label>
+                      <input type="password" name="password" id="password">
+                    </div>
+
+                    <button type="submit" class="button button--lg">Enviar</button>
+
+
+
+
+
+                  </form>
+
+
+                  <div class="article__demo-formResponse">
+
+                  </div>
+                </div>
+
+
+              </div>
+            </article>
+
+
+          </div>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <script src="/components/tooltip.js"></script>
+  <script src="/components/form.js"></script>
+</body>
+
+</html>

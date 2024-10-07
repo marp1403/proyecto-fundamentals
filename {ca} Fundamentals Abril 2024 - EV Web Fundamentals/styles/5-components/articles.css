@@ -1,0 +1,88 @@
+article {
+    margin-top: 48px;
+}
+
+article h3{
+    margin-top: 20px;
+    font-weight: 600;
+    font-size: var(--font-lg);
+   
+}
+
+article p{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+
+
+
+
+
+.article__diagram{
+    margin-bottom: 30px;
+    margin-top: 20px;
+
+}
+
+.article__diagram > img{
+    border-radius: var(--rounded-md);
+}
+
+.article__form{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.article__code{
+    margin-top: 32px;
+    margin-bottom: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.article__description{
+    margin-top: 32px;
+}
+
+.article__requirement{
+    margin-top: 32px;
+    margin-bottom: 32px;
+}
+
+.article__requirement-details h4{
+    font-weight: 800;
+    font-size: var(--font-sm);
+    margin-top: var(--spacing-6);
+    margin-bottom: var(--spacing-5) ;
+}
+
+
+.article__demo-tooltip, .article__demo-form{
+    background-color: var(--muted);
+    width: 100;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 32px 0;
+    padding: var(--spacing-12) 0 ;
+    border-radius: var(--rounded-md);
+    gap: 10px;
+    position: relative;
+}
+
+
+.article__demo-formResponse{
+    padding: 24px;
+}
+
+.article__demo-formResponse pre{
+     background-color: white;
+  }
+
+.article__demo-formResponse code{
+     color: black;
+  }

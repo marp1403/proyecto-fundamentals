@@ -1,0 +1,8 @@
+/* Width utilities */
+.full-width {
+  width: 100% !important;
+}
+
+.span-bold{
+  font-weight: 800;
+}

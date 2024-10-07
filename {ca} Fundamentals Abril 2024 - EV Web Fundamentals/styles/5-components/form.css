@@ -1,0 +1,66 @@
+legend{
+    font-size: var(--font-sm);
+    font-weight: 500; 
+ }
+ 
+ legend code{
+     font-weight: 500; 
+ }
+ 
+ input, textarea {
+     border-radius: var(--rounded-md);
+     border: 1px solid var(--ring);
+     padding: var(--spacing-1) var(--spacing-3) ;
+ }
+ 
+ ::placeholder{
+     color: var(--muted-foreground);
+     font-weight: 400;
+     font-size: var(--font-sm);
+     line-height: 24px;
+ }
+ 
+ textarea{
+     height: 80px;
+ }
+ 
+ #form-validation{
+     background-color: white;
+     padding: var(--spacing-4);
+     border-radius: var(--rounded-lg);
+     width: 330px;
+     display: flex;
+     flex-direction: column;
+     gap: 16px;
+ 
+ }
+ 
+ 
+ .form-field{
+     display: flex;
+     flex-direction: column;
+     gap:var(--spacing-1);
+ }
+ 
+ .form-field label{
+     font-weight: 500;
+     font-size: var(--font-sm);
+ }
+ 
+ .alert{
+     color: var(--danger-border);
+     font-weight: 400;
+     font-size: var(--font-sm);
+     margin: 0;
+ }
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 

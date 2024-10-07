@@ -1,0 +1,19 @@
+
+
+
+
+.article__container-tooltip{
+    margin-bottom: 10px;
+    background-color: white ;
+    padding: var(--spacing-1_5) var(--space-unit);
+    border-radius: var(--rounded-md);
+    box-shadow: 0 4px 4px  hsla(0, 0%, 0%, 0.25);
+    position: absolute;
+    z-index: 1;
+    transform: translateY(-110%);
+}
+
+.article__container-tooltip p{
+    margin: 0px;
+    font-size: var(--font-xs);
+}

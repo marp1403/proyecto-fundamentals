@@ -1,0 +1,21 @@
+
+
+.instructions h1 {
+    font-size: var(--font-3xl) ;
+    font-weight:800;
+    font-family: var(--heading);
+}
+
+.instructions h2{
+    margin-top: 48px ;
+    margin-bottom: 24px ;
+    font-weight: 700;
+    font-size: var(--font-lg);
+    font-family: var(--heading);
+}
+
+.instructions p{
+    line-height:  var(--spacing-6);
+    font-size: var(--font-base);
+    font-family: var(--text);
+}

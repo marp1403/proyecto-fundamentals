@@ -1,0 +1,81 @@
+/*
+<nav class="navigation">
+  <ul>
+    <li class="active"><a href="">..</a></li>
+    <li><a href="">..</a></li>
+    <li><a href="">..</a></li>
+  </ul>
+</nav>
+*/
+
+.navigation ul {
+  list-style: none;
+  gap: 16px;
+  display:  flex;
+}
+
+.navigation a {
+  display: block;
+  padding: var(--spacing-2) var(--spacing-3);
+  border-radius: var(--rounded-md);
+
+  color: var(--foreground);
+  font-size: var(--font-sm);
+  font-weight: 500;
+  line-height: var(--leading-5);
+  text-decoration: none;
+}
+
+.navigation a:hover {
+  background-color: var(--background-hover);
+}
+
+.navigation .active a {
+  background-color: var(--background-active);
+}
+
+.navigation .active a:hover {
+  background-color: var(--background-hover);
+}
+
+
+.navigation__items{
+  background-color: white;
+ 
+  display: none;
+  position: absolute;
+  flex-direction: column;
+  top: 60px;
+  width: 100%;
+  left: 0;
+  
+}
+
+
+.navigation__items li{
+  text-align: center;
+}
+
+.navigation--show-items{
+   display: none;
+}
+
+
+@media (min-width:700px){
+   
+   .navigation--show-items{
+      display: flex;
+   }
+
+   .navigation__items{
+      flex-direction: row; 
+      position: static;
+      display: flex;
+
+   }
+}
+
+
+
+
+
